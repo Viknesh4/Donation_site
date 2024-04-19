@@ -1,0 +1,84 @@
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&display=swap');
+    body {
+        margin: 0;
+        padding: 35px 60px;
+        font-family: "Fira Sans", sans-serif;
+    }
+    
+    h1 {
+        color: #000000;
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+        padding-bottom: 30px;
+        text-shadow: 2px 2px #a7a7a7;
+    }
+    
+    .form_container {
+        border: 1px solid #ff1100;
+        justify-content: start;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .labelStyle {
+        color: #000000;
+        font-size: 20px;
+        font-weight: 600;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    
+    input {
+        border: 2px solid #020024;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        background: transparent;
+        margin-left: 10px;
+        width: 100%;
+        color:#000000;
+        backdrop-filter: blur(10px);
+    }
+    
+    select {
+        border: 2px solid #020024;
+        border-radius: 5px;
+        background-color: transparent;
+        margin-left: 10px;
+        width: 100%;
+        color: #000000;
+    }
+    
+    select option {
+        color: #000;
+    }
+    
+    textarea {
+        border: 2px solid #020024;
+        border-radius: 10px;
+        background-color: transparent;
+        margin-left: 10px;
+        width: 100%;
+    }
+    
+    .btnDiv {
+        color: #000;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .btnElement {
+        background: transparent;
+        border: 2px solid green;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+        border-radius: 3px;
+    }
+    
+    .btnElement:hover {
+        background-color: green;
+        color: #fff;
+        box-shadow: 0 8px 10px 0 #28e448f0, 0 17px 50px 0 #1affd1e8;
+    }

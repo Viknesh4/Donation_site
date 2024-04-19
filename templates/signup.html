@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>/* CSS styles */
+    /* Body styles for background image */
+    body {
+      font-family: sans-serif; /* Customize font family if desired */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url("../static/donates.avif") 50% 0 no-repeat fixed; /* Background image */
+      background-size: cover;
+      background-position: center;
+    }
+    
+    /* Form container */
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+       /* Updated background color with transparency */
+      border-radius: 20px;
+      box-shadow: 8px 8px 20px #000000;
+      color: white;
+      font-weight: bolder;  /* Adjust text color for readability */
+    }
+    
+    /* Form header */
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff; 
+      font-size: 2rem;/* Adjust text color for readability */
+    }
+    
+    /* Form fields */
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px; /* Adjust font size for inputs */
+    }
+    
+    /* Submit button */
+    .form-container button[type="submit"] {
+      background-color: #444444;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px; /* Adjust font size for button */
+    }
+    
+    /* Submit button hover effect */
+    .form-container button[type="submit"]:hover {
+      background-color: #747474;
+    }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Sign Up</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div class="field-container">
+      <label for="username">Username</label>
+      {{ form.username }}
+    </div>
+    <div class="field-container">
+      <label for="username">Email</label>
+      {{ form.email }}
+    </div>
+    <div class="field-container">
+      <label for="username">Password</label>
+      {{ form.password1 }}
+    </div>
+    <div class="field-container">
+      <label for="username">Confirm Password</label>
+      {{ form.password2 }}
+    </div>
+    <div style="flex-wrap: wrap; flex-direction: row; text-align: center;">
+      <button type="submit">Sign Up</button>
+      <p style="color: #fff;">Already have an account? <a href="{% url 'login' %}" style="color: #0084ff;">Login</a></p>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    /* Basic styles */
+    body {
+      font-family: sans-serif; /* Customize font family if desired */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: rgb(100,32,170);
+      background: linear-gradient(30deg, rgba(100,32,170,1) 0%, rgba(255,62,165,1) 32%, rgba(255,126,212,1) 52%, rgba(188,153,223,1) 65%, rgba(7,227,254,1) 100%);
+      /*background: url("../static/logni.avif") 50% 0 no-repeat fixed;*/
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Login form container */
+    .login-form {
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      color: #fff; /* Adjust text color for readability */
+      text-align: center;
+      max-width: 400px; /* Optional: Set a maximum width */
+      margin: 0 auto; /* Center the form horizontally */
+    }
+
+    /* Login title */
+    h2 {
+      color: #fff; 
+      margin-bottom: 20px;
+      font-size: 2em;
+      text-shadow: 2px 2px 8px #000;
+      
+    }
+
+    /* Form styling */
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%; /* Form stretches to container width */
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      color: #000000; 
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 16px; /* Adjust font size for labels */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 10px;
+      border: 1px solid #000000;
+      width: 100%;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      font-size: 16px; /* Adjust font size for inputs */
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      border-color: #333;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+    /* Signup button */
+    .login-button {
+      /*background-color: #3498db;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      font-size: 16px;
+      margin: 10px;
+      box-shadow: 2px 2px 2px #000; Add margin to separate from login button */
+      --color: #02a12f;
+      --hover: #02a12f;
+    }
+    .login-button:hover,
+    .login-button:focus {
+      box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+      transform: translateY(-0.25em);
+    }
+    button {
+      color: var(--color);
+      transition: 0.25s;
+    }
+    button:hover, button:focus {
+      border-color: var(--hover);
+      color: #000000;
+    }
+
+    /* Login button */
+    button[type="submit"] {
+      /*background-color: #3498db;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      font-size: 16px; Adjust font size for button */
+      background: none;
+      border: 2px solid;
+      font: inherit;
+      line-height: 1;
+      margin: 0.5em;
+      padding: 1em 2em;
+      border-radius: 25px;
+    }
+
+    .field-container{
+      margin-bottom: 20px;
+    }
+    .form-class{
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px #000000;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Login</h2>
+  <form class="form-class" method="post">
+    {% csrf_token %}
+    <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-between;">
+      <div >
+        <div class="field-container">
+          <label for="username">Username</label>
+          {{ form.username }}
+        </div>
+        <div class="field-container">
+          <label for="password">Password</label>
+          {{ form.password }}
+        </div>
+        <div style="text-align: center;">
+          <button type="submit" class="login-button">Login</button>
+          <p style="color: #000000;">Create account <a href="{% url 'signup' %}" style="color: #0084ff;">Sign Up</a></p>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <img src="../static/logo.png" height="300px"/>
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

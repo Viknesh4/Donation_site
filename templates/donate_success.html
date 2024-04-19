@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Success</title>
+    <style>/* CSS styles for Donation Success page */
+
+        /* Center the content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        /* Container for the content */
+        .container {
+            text-align: center;
+        }
+        
+        /* Heading style */
+        h2 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+        }
+        
+        /* Paragraph style */
+        p {
+            font-size: 22px;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        </style>
+</head>
+<body>
+<div style="justify-content: center;">
+    <h2>Donation Success</h2>
+    <div class="container">
+        <p>Thank you for your donation!</p>
+        <p>You have successfully donated {{ total_donations }} items.</p>
+        <p>{{ greeting }}</p>
+    </div>
+</div>
+</body>
+</html>

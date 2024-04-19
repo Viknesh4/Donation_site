@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Statistics</title>
+    <style>
+        /* CSS styles for Donation Statistics table */
+        /* Table container */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        /* Table header */
+        table th {
+            background-color: #f2f2f2;
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Table rows */
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Table data cells */
+        table td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Table data cells in the first column */
+        table td:first-child {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Donation Statistics</h2>
+<table>
+    <tr>
+        <th>City</th>
+        <th>Category</th>
+        <th>Total Quantity</th>
+    </tr>
+    {% for city, data in grouped_data.items %}
+        {% for category_city_total in data %}
+            <tr>
+                <td>
+                    {% if forloop.first %}
+                        {{ category_city_total.user_details__city }}
+                    {% endif %}
+                </td>
+                <td>{{ category_city_total.category }}</td>
+                <td>{{ category_city_total.total_quantity }}</td>
+            </tr>
+        {% endfor %}
+    {% endfor %}
+</table>
+
+</body>
+</html>

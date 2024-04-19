@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="../static/user_details.css">
+    <!--Bootstrap 4.5-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>User Details</h1>
+    <form method="post">
+    {% csrf_token %}
+    <div class="form_container">
+        <div class="container">
+            <div class="row">
+                
+                <div class="labelStyle col-sm-12 col-md-6">
+                    <label for="f_name">First Name: </label>
+                    {{ form.first_name }}
+                </div>
+                <div class="labelStyle col-sm-12 col-md-6">
+                    <label for="fl_name">Last Name: </label>
+                    {{ form.last_name }}
+                </div>
+
+                <div class="labelStyle col-sm-12 col-md-6">
+                    <label for="phone">Phone Number: </label>
+                    {{ form.phone_number }}
+                </div>
+                
+                <div class="labelStyle col-md-6 col-sm-12" style="margin-top: 40px;">
+                    <label for="gender">Gender:</label>
+                    {{ form.gender }}
+
+                </div>
+
+                <hr style="width: 100%; border: 1px solid#ff0000; margin: 30px;">
+
+                <div class="labelStyle col-sm-12 col-md-6">
+                    <label for="address">Address</label>
+                    {{ form.address }}
+                </div>
+                <div class="labelStyle col-sm-12 col-md-6">
+                    <label for="pincode">Pincode: </label>
+                    {{ form.pincode }}
+                </div>
+                <div class="labelStyle col-md-6 col-sm-12">
+                    <label for="district">District: </label>
+                    {{ form.city }}
+                </div>
+                <div class="labelStyle col-sm-12 col-md-6">
+                    <label for="state">State: </label>
+                    {{ form.state }}
+                </div>
+                <div class="labelStyle col-md-6 col-sm-12" style="margin-top: 40px;">
+                    <label for="gender">Country:</label>
+                    {{ form.country }}
+                </div>
+
+            </div>
+        </div>
+        <div class="btnDiv">
+            <button type="submit" class="btnElement">Submit</button>
+        </div>
+    
+    </div>
+</form>
+</body>

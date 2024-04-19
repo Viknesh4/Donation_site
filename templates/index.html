@@ -1,0 +1,73 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+<div class="home_bg_align">
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <img src="{% static 'logo.png' %}" alt="RE - Thread" width="80" height="80">
+        <a class="navbar-brand" href="#" style="font-weight: 700;font-size: 36px;"><span style="color: red; ">RE-</span>THREAD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav navHomeElements">
+                <a class="nav-link active navElement" href="#">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-link navElement" href="#">ABOUT</a>
+                <a class="nav-link navElement" href="#">BLOG</a>
+                <a class="nav-link navElement" href="#">DONATE</a>
+                <a class="nav-link navElement" href="#">CONTACT</a>
+                <a href="{% url 'login' %}" class="btn btn-outline-danger" style="font-size: 16px; font-weight: bold;">LOGIN</a>
+                <a href="{% url 'signup' %}" class="btn btn-outline-success" style="font-size: 16px; font-weight: bold;">SIGN UP</a>
+            </div>
+        </div>
+        <img src="{% static 'klulogo.png' %}" alt="RE - Thread" width="80" height="70">
+    </nav>
+    <div class="row">
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+            <h1 style="font-size: 56px; color: brown;">HELP US TO <br>HELP OTHERS</h1>
+            <p style="font-size: 20px; margin-top: 20px;">Together we can make difference.<br>Your donation will make a difference in the lives of others.<br>Every donation, No matter how small, Makes a difference.</p>
+            <div style="margin-top: 20px;">
+                <button class="donateBtn " type ="button" ><a href="{% url 'login' %}" style="text-decoration: none; color: none;">Donate Now</a></button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-center d-none d-lg-block">
+            <img src="{% static 'home.png' %}" alt="Donation " class="homeImg ">
+        </div>
+    </div>
+</div>
+
+<div class="about_bg_align">
+    <h1 class="about_h1">ABOUT US</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 mission_div">
+                <h1 class="br_h1">OUR MISSION</h1>
+                <img src="{% static 'mission.png' %}" class="br_img" />
+            </div>
+            <div class="col-sm-12 col-md-6 mission_div">
+                <h1 class="misson_h1">Together we can make a difference</h1>
+                <p style="text-align: justify; align-items: center; margin: 20px;">Our mission is to empower individuals and communities to make a positive impact through the simple act of clothing donation. We strive to create a world where everyone has access to quality clothing, regardless of their circumstances,
+                    while also promoting sustainability and environmental stewardship. By connecting donors, beneficiaries, and partners through our innovative online platform, we aim to foster compassion, dignity, and social responsibility in the
+                    global community. Together, we can transform lives, reduce waste, and build a more equitable and sustainable future for all.
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 mission_div order-sm-2 order-md-1">
+                <p style="text-align: justify; align-items: center; margin: 20px;">Our charity is dedicated to uplifting communities through the transformative act of clothing donation. With a focus on sustainability and social impact, we strive to provide access to quality clothing for those in need while reducing
+                    environmental waste. Through innovative partnerships and technology-driven solutions, we aim to foster empathy, dignity, and resilience in every donation we receive. Join us in our mission to create a world where everyone has the
+                    opportunity to thrive, one garment at a time.
+                </p>
+                <button class="br_button" type="button"><a href="{% url 'login' %}" style="text-decoration: none; color: none;">Donate</a></button>
+            </div>
+            <div class="col-sm-12 col-md-6 mission_div order-sm-1 order-md-2">
+                <h1 class="br_h1">ABOUT OUR CHARITY</h1>
+                <img src="{% static 'charity.png' %}" class="br_img" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

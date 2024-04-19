@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.home_bg_align {
+    background: linear-gradient(135deg, #f1eedc 0%, #f1eedc 51%, #e9c874 51%, #e9c874 100%);
+    align-items: left;
+    padding: 40px;
+}
+
+nav {
+    background-color: transparent;
+    color: #000;
+}
+
+.navElement {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.navElement:hover {
+    text-decoration: dashed;
+}
+
+.navHomeElements {
+    display: flexbox;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.donateBtn {
+    background-color: orange;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.donateBtn:hover {
+    color: white;
+    background-color: #00492b;
+    box-shadow: 4px 4px 5px #4b4949;
+    border: none;
+}
+
+.homeImg {
+    align-items: center;
+    width: 100%;
+}
+
+.about_bg_align {
+    background-color: #fff;
+}
+
+.about_bg_align {
+    padding: 25px;
+    text-align: center;
+}
+
+.about_h1 {
+    font-size: 36px;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.mission_div {
+    border: 5px solid #f0d089;
+}
+
+.br_h1 {
+    background-color: #f0d089;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.br_img {
+    height: 200px;
+    width: 200px;
+    margin: 20px;
+}
+
+.br_button {
+    color: #000000;
+    background-color: aqua;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px #4b4949;
+}
+
+.br_button:hover {
+    color: white;
+    background-color: #00492b;
+    box-shadow: 4px 4px 5px #4b4949;
+    border: none;
+}
+
+.misson_h1 {
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: underline;
+}
